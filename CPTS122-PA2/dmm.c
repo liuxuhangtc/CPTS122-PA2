@@ -2,6 +2,7 @@
 
 #include"dmm.h"
 
+// string copy
 char* stringcopy(char* str)
 {
 	int i;
@@ -18,6 +19,7 @@ char* stringcopy(char* str)
 	return result;
 }
 
+//Count number
 int cnt_num(Node* list)
 {
 	int cnt = 0;
@@ -37,6 +39,7 @@ int cnt_num(Node* list)
 	return cnt;
 }
 
+//Show the records
 void show_records(Node* list)
 {
 	char type;
@@ -69,6 +72,7 @@ void show_records(Node* list)
 	}
 }
 
+//Display
 void display_info(song* record)
 {
 	if (record != NULL)
@@ -84,6 +88,7 @@ void display_info(song* record)
 	}
 }
 
+//Load from file
 Node* load()
 {
 	FILE* fp = fopen("data.txt", "r");
@@ -155,6 +160,7 @@ Node* load()
 	return list;
 }
 
+//Store to the file
 void store_info(Node* list)
 {
 	Node* curr = list;
@@ -182,6 +188,7 @@ void store_info(Node* list)
 	fclose(fp);
 }
 
+//Delete method
 void del_list(Node* list)
 {
 	Node* temp;
@@ -202,6 +209,7 @@ void del_list(Node* list)
 	}
 }
 
+//Delete
 void del_record(song* record)
 {
 	if (record == NULL)
@@ -216,6 +224,7 @@ void del_record(song* record)
 	free(record);
 }
 
+//Remove
 void remove_record(Node** pList)
 {
 	Node* temp = search_songTitle(*pList);
@@ -239,6 +248,7 @@ void remove_record(Node** pList)
 	}
 }
 
+//Ask info to insert
 Node* read()
 {
 	char line[128];
@@ -276,6 +286,7 @@ Node* read()
 	return result;
 }
 
+//Sorting
 void sort_fun(Node** pList, Node* node, int option)
 {
 	Node* start = *pList;
@@ -330,6 +341,7 @@ void sort_fun(Node** pList, Node* node, int option)
 	}
 }
 
+//Sorts
 void sort_records(Node** pList, int option)
 {
 	Node* temp = *pList;
@@ -351,6 +363,7 @@ void sort_records(Node** pList, int option)
 	}
 }
 
+//Rate
 void rate(song* record)
 {
 	display_info(record);
@@ -358,6 +371,7 @@ void rate(song* record)
 	scanf("%d", &(record->rate));
 }
 
+//Edit
 void edit(song* record)
 {
 	char line[128];
@@ -426,6 +440,7 @@ void edit(song* record)
 
 }
 
+//Scan and to display
 Node* scan_field(Node *list)
 {
 	int field;
@@ -470,6 +485,7 @@ Node* scan_field(Node *list)
 	return NULL;
 }
 
+//Search from the title
 Node* search_songTitle(Node *list)
 {
 	char title[128];

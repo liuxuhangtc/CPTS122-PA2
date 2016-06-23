@@ -7,6 +7,8 @@
 *******************************************************************************************/
 
 
+// Header
+
 #ifndef DMM_H
 #define DMM_H
 #define _CRT_SECURE_NO_WARNINGS
@@ -18,6 +20,7 @@
 #include <ctype.h>
 #include <conio.h>
 
+//Structs
 typedef struct song
 {
 	char* artist;
@@ -51,9 +54,8 @@ Node* search_songTitle(Node *list);
 Node* read();
 Node* load();
 
-
+//Functions
 char* stringcopy(char* str);
-
 int cnt_num(Node* list);
 void display_info(song* record);
 void show_records(Node* list);

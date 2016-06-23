@@ -8,6 +8,7 @@
 
 #include"dmm.h"
 
+//Run Main Program
 int main()
 {
 	char menu = '1';
