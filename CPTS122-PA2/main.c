@@ -21,7 +21,7 @@ int main()
 	{
 
 		system("cls"); // Print menu
-		printf("Welcome to the Digital Music Manager\n\n");
+		printf("Welcome to the Digital Music Manager---By Xuhang Liu\n\n");
 		printf("1. Load\n");
 		printf("2. Store\n");
 		printf("3. Display\n");
